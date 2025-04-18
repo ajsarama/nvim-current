@@ -1,4 +1,4 @@
-local treesitter = {
+return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 
@@ -19,7 +19,7 @@ local treesitter = {
 			},
 
 			highlight = {
-				enable = { "lua", "dart" },
+				enable = { "lua" },
 
 				-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
 				-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
@@ -30,33 +30,3 @@ local treesitter = {
 		}
 	end,
 }
-
-local indentation = {
-	"lukas-reineke/indent-blankline.nvim",
-	dependencies = { "nvim-treesitter/nvim-treesitter" },
-	main = "ibl",
-	opts = {},
-}
-
-local ufo = {
-	'kevinhwang91/nvim-ufo',
-	dependencies = { "kevinhwang91/promise-async" },
-	config = function()
-		vim.o.foldcolumn = '1' -- '0' is not bad
-		vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-		vim.o.foldlevelstart = 99
-		vim.o.foldenable = true
-
-		-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-		vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-		vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-
-		require('ufo').setup({
-			provider_selector = function(bufnr, filetype, buftype)
-				return { 'treesitter', 'indent' }
-			end
-		})
-	end,
-}
-
-return { treesitter, indentation, ufo }

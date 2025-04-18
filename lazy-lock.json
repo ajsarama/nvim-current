@@ -1,16 +1,8 @@
 {
   "dart-vim-plugin": { "branch": "master", "commit": "4bdc04e2540edf90fda2812434c11d19dc04bc8f" },
-  "flutter-tools.nvim": { "branch": "main", "commit": "6faf2c70bd56f1fe78620591a2bb73f4dc6f4870" },
-  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
+  "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
+  "fzf-lua": { "branch": "main", "commit": "307147097e49ca8592fe857f6b3e12a01fda8e69" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
-  "nvim-dap": { "branch": "master", "commit": "7aade9e99bef5f0735cf966e715b3ce45515d786" },
-  "nvim-dap-ui": { "branch": "master", "commit": "881a69e25bd6658864fab47450025490b74be878" },
-  "nvim-dap-virtual-text": { "branch": "master", "commit": "df66808cd78b5a97576bbaeee95ed5ca385a9750" },
-  "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
-  "nvim-treesitter": { "branch": "master", "commit": "684eeac91ed8e297685a97ef70031d19ac1de25a" },
-  "nvim-ufo": { "branch": "main", "commit": "a026364df62e88037b26d37c9f14c17c006fd577" },
-  "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-  "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
-  "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" }
+  "nvim-treesitter": { "branch": "master", "commit": "684eeac91ed8e297685a97ef70031d19ac1de25a" }
 }
