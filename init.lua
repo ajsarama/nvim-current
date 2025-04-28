@@ -17,8 +17,8 @@ vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
 vim.lsp.config("*", {
 	on_init = function(...)
-		vim.keymap.set("n", "gf", vim.lsp.buf.format, { desc = "Lsp format" })
-		vim.keymap.set("n", "gg", vim.lsp.buf.definition, { desc = "Lsp definition" })
+		--vim.keymap.set("n", "gf", vim.lsp.buf.format, { desc = "Lsp format" })
+		--vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Lsp definition" })
 	end,
 })
 
@@ -30,6 +30,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = false })
 			vim.keymap.set("i", "<c-space>", function() vim.lsp.completion.get() end, { desc = "Lsp completion trigger" })
 		end
+		vim.keymap.set("n", "gf", vim.lsp.buf.format, { desc = "Lsp format" })
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Lsp definition" })
 	end,
 })
 
+vim.keymap.set("v", "<m-y>", "\"+y", { desc = "yank to system clipboard" })
+vim.keymap.set("c", "<m-p>", "<c-r>+", { desc = "paste from system clipboard" })
