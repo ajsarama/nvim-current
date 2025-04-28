@@ -33,4 +33,13 @@ local treesitter = {
 	end,
 }
 
-return { rainbow, treesitter }
+local autopairs = {
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6', --recommended as each new version will have breaking changes
+    opts={
+        --Config goes here
+    },
+}
+
+return { rainbow, treesitter, autopairs }
