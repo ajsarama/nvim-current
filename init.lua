@@ -8,6 +8,8 @@ vim.opt.autoindent = true
 vim.opt.smarttab = true
 vim.opt.showmode = false
 vim.o.winborder = "rounded"
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 require("config.lazy")
 
