@@ -1,16 +1,18 @@
 return {
 	"ibhagwan/fzf-lua",
 	lazy = false,
+	dependencies = { "echasnovski/mini.icons" },
 	opts = {
 		"hide",
 		fzf_colors = true,
 		winopts = {
 			fullscreen = true,
 		},
+		defaults = {
+			file_icons = "mini",
+		},
 	},
 	cmd = "FzfLua",
-	keys = {
-	},
 	init = function()
 		require("fzf-lua").register_ui_select()
 		vim.keymap.set("n", "<leader>ff", function() require("fzf-lua").files() end, { desc = "Fzf find files" })

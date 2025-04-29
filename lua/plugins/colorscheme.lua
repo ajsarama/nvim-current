@@ -20,14 +20,8 @@ local rose = {
 	"rose-pine/neovim",
 	priority = 1000,
 	name = "rose-pine",
-	opts = {
-		styles = {
-			bold = false,
-			italic = false,
-		},
-	},
 	config = function(opts)
-		require("rose-pine").setup(opts)
+		require("rose-pine").setup()
 	end
 }
 
