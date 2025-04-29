@@ -15,13 +15,6 @@ vim.lsp.enable("luals")
 vim.lsp.enable("dartls")
 vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
-vim.lsp.config("*", {
-	on_init = function(...)
-		--vim.keymap.set("n", "gf", vim.lsp.buf.format, { desc = "Lsp format" })
-		--vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Lsp definition" })
-	end,
-})
-
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
 		local client = vim.lsp.get_client_by_id(ev.data.client_id)

@@ -4,29 +4,24 @@ local auto_dark = {
 	opts = {
 		set_dark_mode = function()
 			vim.o.background = 'dark'
-			vim.cmd.colorscheme 'solarized'
+			vim.cmd.colorscheme('rose-pine')
 		end,
 		set_light_mode = function()
 			vim.o.background = 'light'
-			vim.cmd.colorscheme 'solarized'
+			vim.cmd.colorscheme('rose-pine')
 		end,
 	}
 }
 
-local solarized = {
-	'maxmx03/solarized.nvim',
-	lazy = false,
-	priority = 1000,
-	opts = {
-		variant = "spring",
-		styles = {
-			enabled = false,
-		},
-	},
-	config = function(_, opts)
-		vim.o.termguicolors = true
-		require('solarized').setup(opts)
-	end,
+-- lua/plugins/rose-pine.lua
+local rose = {
+	"rose-pine/neovim",
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
 }
 
-return { auto_dark, solarized }
+
+
+return { auto_dark, rose }
