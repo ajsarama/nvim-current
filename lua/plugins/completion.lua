@@ -1,7 +1,6 @@
 local icons = { 'echasnovski/mini.icons', version = false, opts = { style = "ascii" } }
 local blink = {
 	'saghen/blink.cmp',
-	dependencies = { 'rafamadriz/friendly-snippets' },
 	version = '1.*',
 	opts = {
 		-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
@@ -27,10 +26,15 @@ local blink = {
 		-- (Default) Only show the documentation popup when manually triggered
 		completion = { documentation = { auto_show = false } },
 
+
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
-			default = { 'lsp', 'path', 'snippets' },
+			default = {
+				'lsp',
+				'path',
+				'snippets',
+			},
 		},
 
 		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
